@@ -4,6 +4,12 @@ import TicketsTable from '../components/TicketsTable';
 import SideButton from '../components/SideButton';
 
 const Dashboard = () => {
+  const sampleTickets = [
+    { id: "#T001", subject: "Server Down", status: "Open", date: "2025-04-01" },
+    { id: "#T002", subject: "Network Issue", status: "In Progress", date: "2025-04-02" },
+    { id: "#T003", subject: "Bug Report", status: "Closed", date: "2025-03-30" },
+  ];
+
   return (
     <div className="dashboard flex-1 p-6">
       <h2 className="text-2xl font-semibold mb-4">Dashboard</h2>
@@ -15,7 +21,7 @@ const Dashboard = () => {
         <StatsCard title="Open Tickets" value="45" />
         <StatsCard title="Closed Tickets" value="75" />
       </div>
-      <TicketsTable tickets={[]} />
+      <TicketsTable tickets={sampleTickets} />
     </div>
   );
 };
